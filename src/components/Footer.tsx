@@ -1,0 +1,79 @@
+import './Footer.css';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-content">
+          <div className="footer-section">
+            <div className="footer-logo">
+              <h3>Dr. Jamal Harouch</h3>
+              <p className="footer-tagline">Excellence en Santé</p>
+            </div>
+            <p className="footer-description">
+              Fournissant des services de radiologie de précision avec plus de 15 ans d'expérience.
+              Des diagnostics fiables et des soins avancés sont nos priorités absolues.
+            </p>
+          </div>
+
+          <div className="footer-section">
+            <h4>Liens Rapides</h4>
+            <ul className="footer-links">
+              <li><button onClick={() => scrollToSection('home')}>Accueil</button></li>
+              <li><button onClick={() => scrollToSection('about')}>À propos du Dr. Jamal</button></li>
+              <li><button onClick={() => scrollToSection('services')}>Services</button></li>
+              <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Services</h4>
+            <ul className="footer-links">
+              <li><button onClick={() => scrollToSection('services')}>Radiologie Diagnostique</button></li>
+              <li><button onClick={() => scrollToSection('services')}>Échographie</button></li>
+              <li><button onClick={() => scrollToSection('services')}>IRM</button></li>
+              <li><button onClick={() => scrollToSection('services')}>Imagerie du Sein</button></li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Contact</h4>
+            <ul className="footer-contact">
+              <li>
+                <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+212 522 594 949</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>jharouch@gmail.com</span>
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Avenue 10 Mars, Salama 3<br />Sidi Othmane, Casablanca, Maroc</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; {currentYear} Cabinet Médical du Dr Jamal Harouch. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
