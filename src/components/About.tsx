@@ -10,7 +10,7 @@ export default function About() {
         <div className="about-content">
           <div className="about-image">
             <div className="about-image-wrapper">
-              <img src="/scanner.webp" alt="Scanner Radiologique" style={{width: '100%', height: 'auto', borderRadius: '10px'}} />
+              <img src="/scanner.webp" alt="Scanner Radiologique" style={{width: '100%', height: 'auto', borderRadius: '10px'}} onLoad={() => console.log('Scanner image loaded')} onError={() => console.error('Scanner image failed to load')} />
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function About() {
               <div className="demo-container" onClick={() => setIsPlaying(true)}>
                 {!isPlaying && (
                   <>
-                    <img src="/sonosite-hfl50x-b_orig.webp" alt="Ultrasound Scanner" className="scanner-image" />
+                    <img src="/sonosite-hfl50x-b_orig.webp" alt="Ultrasound Scanner" className="scanner-image" onLoad={() => console.log('Ultrasound image loaded')} onError={() => console.error('Ultrasound image failed to load')} />
                     <div className="demo-message">
                       Touchez l'appareil pour voir comment le scan fonctionne
                     </div>
