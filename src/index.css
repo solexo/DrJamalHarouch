@@ -184,6 +184,23 @@ button {
   height: 100%;
 }
 
+.mri-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.mri-text h2 {
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.mri-text p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -206,5 +223,11 @@ button {
   .lottie-container {
     width: 300px;
     height: 300px;
+  }
+
+  .mri-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
   }
 }
