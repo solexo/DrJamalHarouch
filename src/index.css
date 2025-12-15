@@ -173,6 +173,10 @@ button {
   width: 500px;
   height: 500px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--off-white);
+  box-shadow: var(--shadow-md);
 }
 
 .lottie-container dotlottie-wc {
