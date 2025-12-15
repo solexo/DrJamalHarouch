@@ -70,7 +70,9 @@ export default function Footer() {
                 <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>Avenue 10 Mars, Salama 3<br />Sidi Othmane, Casablanca, Maroc</span>
+                <a href="https://www.google.com/maps/place/Radiologie+Sidi+Othmane/@33.5596349,-7.5614869,17z/data=!3m1!4b1!4m6!3m5!1s0xda6330fb684d2b1:0x8b636357576b390f!8m2!3d33.5596349!4d-7.5614869!16s%2Fg%2F11h7cpg11l?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank" rel="noopener noreferrer">
+                  <span>Avenue 10 Mars, Salama 3<br />Sidi Othmane, Casablanca, Maroc</span>
+                </a>
               </li>
             </ul>
           </div>
