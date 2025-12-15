@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,11 +12,15 @@ import { ThemeProvider } from './ThemeContext';
 function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+
     const video = videoRef.current;
     const section = sectionRef.current;
-    if (!video || !section) return;
+    if (!video || !section || isMobile) return;
 
     let ticking = false;
 
@@ -45,8 +49,9 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <ThemeProvider>
@@ -58,17 +63,22 @@ function App() {
           <Services />
           <section ref={sectionRef} className="video-section">
             <div className="container">
-              <video
-                ref={videoRef}
-                muted
-                playsInline
-                className="scroll-video"
-                onLoadedData={() => console.log('Bones video loaded')}
-                onPlay={() => console.log('Bones video playing')}
-                onError={(e) => console.log('Bones video error:', e)}
-              >
-                <source src="/bones.webm" type="video/webm" />
-              </video>
+              {!isMobile && (
+                <video
+                  ref={videoRef}
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="scroll-video"
+                  onLoadedData={() => console.log('Bones video loaded')}
+                  onLoadStart={() => console.log('Bones video load start')}
+                  onCanPlay={() => console.log('Bones video can play')}
+                  onPlay={() => console.log('Bones video playing')}
+                  onError={(e) => console.log('Bones video error:', e)}
+                >
+                  <source src="/bones.webm" type="video/webm" />
+                </video>
+              )}
             </div>
           </section>
           <Appointment />
