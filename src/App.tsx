@@ -18,6 +18,11 @@ function App() {
           <Hero />
           <About />
           <Services />
+          <section className="video-section">
+            <div className="container">
+              <div dangerouslySetInnerHTML={{__html: '<dotlottie-wc src="https://lottie.host/173cd462-1070-4bee-bbe4-ca907c535623/W80JNJewuU.lottie" style="width: 300px; height: 300px;" autoplay loop></dotlottie-wc>'}} />
+            </div>
+          </section>
           <Appointment />
           <Contact />
         </main>
