@@ -77,10 +77,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4>Localisation</h4>
-            <iframe src="https://www.google.com/maps?q=33.5596349,-7.5614869&output=embed" width="100%" height="300" style={{border:0}} allowFullScreen loading="lazy"></iframe>
-          </div>
         </div>
 
         <div className="footer-bottom">

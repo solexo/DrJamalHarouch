@@ -65,22 +65,15 @@ export default function Contact() {
         </div>
 
         <div className="map-container">
-          <div className="map-placeholder">
-            <svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="800" height="400" fill="#e9ecef"/>
-              <g opacity="0.3">
-                <path d="M100 100h600v200H100z" stroke="#6c757d" strokeWidth="2" fill="none"/>
-                <path d="M150 150h100v100H150z" fill="#adb5bd"/>
-                <path d="M300 180h150v70H300z" fill="#adb5bd"/>
-                <path d="M500 150h150v100H500z" fill="#adb5bd"/>
-                <circle cx="400" cy="250" r="40" fill="#0066cc" opacity="0.8"/>
-                <path d="M400 210v30m0 10v30m-20-60h40m-30 10h20" stroke="white" strokeWidth="3"/>
-              </g>
-              <text x="400" y="350" textAnchor="middle" fill="#6c757d" fontSize="18" fontFamily="sans-serif">
-                Avenue 10 Mars, Salama 3, Sidi Othmane, Casablanca
-              </text>
-            </svg>
-          </div>
+          <iframe
+            src="https://www.google.com/maps?q=33.5596349,-7.5614869&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            title="Map of Dr. Jamal Harouch's office"
+          ></iframe>
         </div>
       </div>
     </section>

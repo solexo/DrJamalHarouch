@@ -21,16 +21,21 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-video-top">
-          <video autoPlay loop muted playsInline className="hero-video-full">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hero-video-full"
+            onLoadedData={() => console.log('Hero video loaded')}
+            onPlay={() => console.log('Hero video playing')}
+            onError={(e) => console.log('Hero video error:', e)}
+          >
             <source src="/1212.webm" type="video/webm" />
           </video>
           <div className="hero-overlay"></div>
         </div>
         <div className="hero-bottom">
-          <p className="hero-description">
-            Fournissant des services de radiologie de pointe avec plus de 15 ans d'expérience.
-            Le Dr Jamal Harouch utilise les dernières technologies pour des diagnostics précis et des soins personnalisés.
-          </p>
           <div className="hero-actions">
             <button className="btn-primary" onClick={scrollToAppointment}>
               Prendre Rendez-vous
