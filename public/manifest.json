@@ -1,0 +1,17 @@
+{
+  "name": "Dr Jamal Harouch - Radiologue à Casablanca",
+  "short_name": "Dr Harouch",
+  "description": "Cabinet de radiologie du Dr Jamal Harouch à Casablanca, Maroc. Services de radiologie diagnostique, échographie, IRM.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "689x608",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

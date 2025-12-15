@@ -30,11 +30,10 @@ export default function Header() {
         <div className="header-content">
           <div className="logo">
             <div className="logo-icon">
-              <img src="/logo.webp" alt="Dr. Jamal Logo" width="40" height="40" />
+              <img src="/logo.webp" alt="Radiologie Sidi Othmane Logo" width="40" height="40" />
             </div>
             <div>
-              <h2>Dr. Jamal Harouch</h2>
-              <span className="subtitle">Radiologie d'Excellence</span>
+              <h2>RADIOLOGIE SIDI OTHMANE</h2>
             </div>
           </div>
 
