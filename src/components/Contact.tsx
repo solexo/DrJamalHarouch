@@ -66,12 +66,13 @@ export default function Contact() {
 
         <div className="map-container">
           <iframe
-            src="https://www.google.com/maps?q=33.5596349,-7.5614869&output=embed"
-            width="100%"
-            height="400"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3939.4932012061618!2d-7.5640618!3d33.5596349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda6330fb684d2b1%3A0x8b636357576b390f!2sRadiologie%20Sidi%20Othmane!5e1!3m2!1sen!2sma!4v1765829520217!5m2!1sen!2sma"
+            width="600"
+            height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Map of Dr. Jamal Harouch's office"
           ></iframe>
         </div>
