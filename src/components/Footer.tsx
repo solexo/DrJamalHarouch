@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Cabinet Médical du Dr Jamal Harouch. Tous droits réservés.</p>
+          <p>&copy; {currentYear} RADIOLOGIE SIDI OTHMANE. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
