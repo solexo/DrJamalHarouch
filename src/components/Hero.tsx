@@ -15,9 +15,9 @@ export default function Hero() {
           <div className="hero-text">
             <span className="hero-badge">Excellence en Radiologie</span>
             <h1 className="hero-title">
-              Diagnostic Précis
-              <span className="highlight">et Soins Avancés</span>
+              Diagnostic Précis <span className="highlight">et Soins Avancés</span>
             </h1>
+            {(() => { console.log('Hero title textContent:', JSON.stringify(document.querySelector('.hero-title')?.textContent)); return null; })()}
           </div>
         </div>
         <div className="hero-video-top">

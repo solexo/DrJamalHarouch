@@ -79,7 +79,7 @@
 .hero-title .highlight {
   color: var(--primary-blue);
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .hero-description {
