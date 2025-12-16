@@ -45,6 +45,15 @@ function App() {
           </section>
           <Appointment />
           <Contact />
+          <section id="privacy" className="section privacy">
+            <div className="container">
+              <h2>Politique de Confidentialité</h2>
+              <p>
+                Ce site ne collecte ni ne stocke aucune donnée personnelle.
+                Il se limite à fournir des informations et des liens de redirection vers des services externes (Google Maps, téléphone, WhatsApp).
+              </p>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>
