@@ -91,7 +91,7 @@ export default function Services() {
             <div key={index} className="service-card">
               {service.image && (
                 <div className="service-image">
-                  <img src={service.image} alt={service.title} onLoad={() => console.log(`${service.title} image loaded`)} onError={() => console.error(`${service.title} image failed to load`)} />
+                  <img src={service.image} alt={service.title} loading="lazy" onLoad={() => console.log(`${service.title} image loaded`)} onError={() => console.error(`${service.title} image failed to load`)} />
                 </div>
               )}
               <div className="service-icon">{service.icon}</div>
