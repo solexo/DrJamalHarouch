@@ -7,8 +7,9 @@ const services = [
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
       </svg>
     ),
+    image: '/xray.webp',
     title: 'Radiologie Diagnostique',
-    description: 'Radiographie standard (X-Ray) - Examens des os, des poumons et de la poitrine pour le diagnostic des fractures, infections et pathologies pulmonaires.',
+    description: 'Radiographie standard (X-Ray) - Examens des os, des poumons et de la poitrine pour le diagnostic des fractures, infections et pathologies pulmonaires. Nos équipements de dernière génération assurent des images de haute qualité pour un diagnostic précis et rapide.',
   },
   {
     icon: (
@@ -16,8 +17,9 @@ const services = [
         <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
       </svg>
     ),
+    image: '/Medecine_Echographie.webp',
     title: 'Échographie (Ultrasons)',
-    description: 'Échographie abdominale, pelvienne, thyroïdienne, des parties molles - Examens non invasifs permettant une exploration détaillée des organes internes.',
+    description: 'Échographie abdominale, pelvienne, thyroïdienne, des parties molles - Examens non invasifs permettant une exploration détaillée des organes internes. L\'échographie utilise des ondes sonores pour créer des images en temps réel, idéale pour le suivi de grossesse, l\'évaluation des organes et la détection précoce de pathologies.',
   },
   {
     icon: (
@@ -25,8 +27,9 @@ const services = [
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
       </svg>
     ),
+    image: '/scanner.webp',
     title: 'Tomodensitométrie (Scanner)',
-    description: 'Scanner CT pour l\'imagerie en coupe des organes internes, des vaisseaux sanguins et des structures osseuses - Diagnostic rapide et précis.',
+    description: 'Scanner CT pour l\'imagerie en coupe des organes internes, des vaisseaux sanguins et des structures osseuses - Diagnostic rapide et précis. Le scanner utilise les rayons X pour produire des images détaillées en 3D, essentiel pour le diagnostic des traumatismes, cancers et maladies vasculaires.',
   },
   {
     icon: (
@@ -35,7 +38,7 @@ const services = [
       </svg>
     ),
     title: 'Imagerie par Résonance Magnétique (IRM)',
-    description: 'IRM du cerveau, de la colonne vertébrale, des articulations et des tissus mous - Imagerie avancée offrant une grande précision pour le diagnostic des pathologies complexes.',
+    description: 'IRM du cerveau, de la colonne vertébrale, des articulations et des tissus mous - Imagerie avancée offrant une grande précision pour le diagnostic des pathologies complexes. L\'IRM utilise des champs magnétiques et des ondes radio pour créer des images haute résolution sans radiation ionisante.',
   },
   {
     icon: (
@@ -43,8 +46,9 @@ const services = [
         <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
       </svg>
     ),
+    image: '/Imagerie de la Femme & Pathologies du Sein.webp',
     title: 'Imagerie de la Femme & Pathologies du Sein',
-    description: 'Interprétation d\'examens mammaires, diagnostic des pathologies du sein, suivi et évaluation radiologique spécialisée.',
+    description: 'Interprétation d\'examens mammaires, diagnostic des pathologies du sein, suivi et évaluation radiologique spécialisée. Nous proposons la mammographie, l\'échographie mammaire et l\'IRM du sein pour le dépistage et le diagnostic précoce du cancer du sein, avec un accompagnement personnalisé.',
   },
   {
     icon: (
@@ -53,7 +57,7 @@ const services = [
       </svg>
     ),
     title: 'Radiologie Interventionnelle',
-    description: 'Actes radiologiques guidés par l\'imagerie pour le diagnostic et la prise en charge thérapeutique.',
+    description: 'Actes radiologiques guidés par l\'imagerie pour le diagnostic et la prise en charge thérapeutique. Inclut les biopsies, drainages, embolisations et autres procédures mini-invasives réalisées sous contrôle radiologique pour traiter diverses pathologies.',
   },
   {
     icon: (
@@ -61,8 +65,9 @@ const services = [
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
       </svg>
     ),
+    image: '/Radiologie Dentaire.webp',
     title: 'Radiologie Dentaire',
-    description: 'Examens radiologiques spécialisés pour les dents, mâchoires et structures buccales, incluant panoramiques dentaires et CBCT.',
+    description: 'Examens radiologiques spécialisés pour les dents, mâchoires et structures buccales, incluant panoramiques dentaires et CBCT. Le CBCT offre des images 3D précises pour la planification des implants dentaires, la chirurgie orthodontique et le diagnostic des pathologies maxillo-faciales.',
   },
 ];
 
@@ -82,6 +87,11 @@ export default function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
+              {service.image && (
+                <div className="service-image">
+                  <img src={service.image} alt={service.title} onLoad={() => console.log(`${service.title} image loaded`)} onError={() => console.error(`${service.title} image failed to load`)} />
+                </div>
+              )}
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
