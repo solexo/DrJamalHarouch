@@ -35,6 +35,7 @@ export default function Header() {
             </div>
             <div>
               <h2>RADIOLOGIE SIDI OTHMANE</h2>
+              <p className="subtitle">Dr Jamal Harouch et Équipe</p>
             </div>
           </div>
 
