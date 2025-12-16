@@ -43,7 +43,7 @@ export default function Hero() {
             <button
               className="btn-secondary-outline"
               onClick={() => {
-                const element = document.getElementById('about');
+                const element = document.getElementById('doctors');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
             >
