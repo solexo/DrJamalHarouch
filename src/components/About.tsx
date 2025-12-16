@@ -18,14 +18,14 @@ export default function About() {
             <span className="section-badge">À propos du Dr. Jamal</span>
             <h2>Spécialiste en Radiologie</h2>
             <p className="lead">
-              Radiologue privé à Casablanca depuis 2001, le Dr Harouch Jamal apporte une expertise
+              Radiologue privé à Casablanca depuis 1994, le Dr Harouch Jamal apporte une expertise
               avancée issue de formations prestigieuses en France.
             </p>
 
             <div className="about-details">
               <p>
                 Diplômé de la faculté de médecine de Montpellier, France, le Dr Harouch Jamal est ancien praticien
-                hospitalier des hôpitaux de France. Il exerce en radiologie privée à Casablanca depuis 2001.
+                hospitalier des hôpitaux de France. Il exerce en radiologie privée à Casablanca depuis 1994.
               </p>
 
               <p>

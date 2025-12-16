@@ -39,23 +39,8 @@ export default function Appointment() {
     setLoading(true);
     setError('');
 
-    // Construct email content
-    const subject = encodeURIComponent('Demande de Rendez-vous pour Examen');
-    const body = encodeURIComponent(`
-Nom: ${formData.patient_name}
-Email: ${formData.email}
-Téléphone: ${formData.phone}
-Date préférée: ${formData.preferred_date}
-Heure préférée: ${formData.preferred_time}
-Raison: ${formData.reason}
-Message: ${formData.message}
-    `);
-
-    // Create mailto URL
-    const mailtoUrl = `mailto:jharouch@gmail.com?subject=${subject}&body=${body}`;
-
-    // Open email client
-    window.location.href = mailtoUrl;
+    // Open phone dialer
+    window.location.href = 'tel:+212522594949';
 
     // Reset form
     setFormData({
@@ -79,11 +64,11 @@ Message: ${formData.message}
         <div className="appointment-content">
           <div className="appointment-info">
             <span className="section-badge">Prendre Rendez-vous</span>
-             <h2>Planifiez Votre Visite</h2>
-             <p className="section-description">
-               Prenez rendez-vous pour vos examens d'imagerie. Le Dr Harouch Jamal offre des services
-               de radiologie précis et des interprétations fiables avec les dernières technologies.
-             </p>
+              <h2>Planifiez Votre Visite</h2>
+              <p className="section-description">
+                Prenez rendez-vous pour vos examens d'imagerie en nous appelant directement.
+                Le Dr Harouch Jamal offre des services de radiologie précis avec les dernières technologies.
+              </p>
 
             <div className="info-items">
               <div className="info-item">
@@ -95,7 +80,7 @@ Message: ${formData.message}
                 <div>
                   <h4>Heures d'Ouverture</h4>
                   <p>Lundi - Vendredi : 9h00 - 18h00</p>
-                  <p>Samedi : 9h00 - 14h00</p>
+                  <p>Samedi : 9h00 - 13h00</p>
                 </div>
               </div>
 
@@ -113,121 +98,12 @@ Message: ${formData.message}
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="appointment-form-container">
-            <form onSubmit={handleSubmit} className="appointment-form">
-              <div className="form-group">
-                <label htmlFor="patient_name">Nom Complet *</label>
-                <input
-                  type="text"
-                  id="patient_name"
-                  name="patient_name"
-                  value={formData.patient_name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Adresse Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone">Numéro de Téléphone *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="preferred_date">Date Préférée *</label>
-                  <input
-                    type="date"
-                    id="preferred_date"
-                    name="preferred_date"
-                    value={formData.preferred_date}
-                    onChange={handleChange}
-                    min={minDate}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="preferred_time">Heure Préférée *</label>
-                  <select
-                    id="preferred_time"
-                    name="preferred_time"
-                    value={formData.preferred_time}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Sélectionner l'heure</option>
-                    <option value="09:00">9:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">1:00 PM</option>
-                    <option value="14:00">2:00 PM</option>
-                    <option value="15:00">3:00 PM</option>
-                    <option value="16:00">4:00 PM</option>
-                    <option value="17:00">5:00 PM</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="reason">Raison de la Visite *</label>
-                <select
-                  id="reason"
-                  name="reason"
-                  value={formData.reason}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Sélectionner la raison</option>
-                  <option value="General Checkup">Radiographie Standard</option>
-                  <option value="Follow-up">Échographie</option>
-                  <option value="New Patient">Scanner CT</option>
-                  <option value="Chronic Condition">IRM</option>
-                  <option value="Acute Illness">Mammographie</option>
-                  <option value="Other">Autre</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Notes Supplémentaires (Optionnel)</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                ></textarea>
-              </div>
-
-              {error && <div className="alert alert-error">{error}</div>}
-
-              <button type="submit" className="btn-primary btn-full" disabled={loading}>
-                {loading ? 'Soumission...' : 'Prendre Rendez-vous pour Examen'}
+            <div className="appointment-call">
+              <button onClick={() => window.location.href = 'tel:+212522594949'} className="btn-primary">
+                Appeler Maintenant: +212 522 594 949
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

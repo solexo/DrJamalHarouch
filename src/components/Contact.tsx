@@ -22,7 +22,7 @@ export default function Contact() {
             <h3>Téléphone</h3>
             <p>Bureau Principal</p>
             <a href="tel:+212522594949" className="contact-link">+212 522 594 949</a>
-            <p className="contact-meta">Lundi - Vendredi, 9h - 18h</p>
+            <p className="contact-meta">Lundi - Vendredi, 9h - 18h, Samedi 9h - 13h</p>
           </div>
 
           <div className="contact-card">
@@ -33,8 +33,7 @@ export default function Contact() {
             </div>
             <h3>Email</h3>
             <p>Envoyez-nous un message</p>
-            <a href="mailto:jharouch@gmail.com" className="contact-link">jharouch@gmail.com</a>
-            <p className="contact-meta">Nous répondrons dans les 24 heures</p>
+            <a href="mailto:HarouchJamal@gmail.com" className="contact-link">HarouchJamal@gmail.com</a>
           </div>
 
           <div className="contact-card">
@@ -59,7 +58,7 @@ export default function Contact() {
             </div>
             <h3>Urgence</h3>
             <p>Ligne d'Urgence 24/7</p>
-            <a href="tel:+212661140510" className="contact-link emergency">+212 661 140 510</a>
+            <a href="tel:+212671706270" className="contact-link emergency">+212 671 706 270</a>
             <p className="contact-meta">Pour les besoins médicaux urgents</p>
           </div>
         </div>
