@@ -16,8 +16,8 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>Dr. Jamal Harouch</h3>
-              <p className="footer-tagline">Excellence en Santé</p>
+              <h3>RADIOLOGIE SIDI OTHMANE</h3>
+              <p className="footer-tagline">Dr Jamal Harouch et Équipe</p>
             </div>
             <p className="footer-description">
               Fournissant des services de radiologie de précision avec plus de 30 ans d'expérience.
