@@ -231,3 +231,20 @@ button {
     text-align: center;
   }
 }
+
+.scanner-section {
+  padding: 60px 0;
+  background-color: var(--white);
+}
+
+.scanner-content {
+  text-align: center;
+}
+
+.scanner-image-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}

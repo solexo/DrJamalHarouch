@@ -34,6 +34,15 @@ function App() {
               </div>
             </div>
           </section>
+          <section className="scanner-section">
+            <div className="container">
+              <div className="scanner-content">
+                <div className="scanner-image-wrapper">
+                  <img src="/scanner.webp" alt="Scanner Radiologique" style={{width: '100%', height: 'auto', borderRadius: '10px'}} onLoad={() => console.log('Scanner image loaded')} onError={() => console.error('Scanner image failed to load')} />
+                </div>
+              </div>
+            </div>
+          </section>
           <Appointment />
           <Contact />
         </main>
