@@ -60,7 +60,7 @@
   gap: 8px;
 }
 
-.nav button {
+.nav a, .nav button {
   background: rgba(0, 102, 204, 0.05);
   color: var(--text-primary);
   padding: 8px 16px;
@@ -69,9 +69,11 @@
   border: 1px solid rgba(0, 102, 204, 0.2);
   border-radius: var(--border-radius);
   transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
 }
 
-.nav button:not(.book-btn):hover {
+.nav a:not(.book-btn):hover, .nav button:not(.book-btn):hover {
   color: white;
   background: var(--primary-blue);
   box-shadow: 0 0 15px rgba(0, 102, 204, 0.5);
@@ -131,7 +133,7 @@
     visibility: visible;
   }
 
-  .nav button {
+  .nav a, .nav button {
     width: 100%;
     text-align: left;
     padding: 16px;
