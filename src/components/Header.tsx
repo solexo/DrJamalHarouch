@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../ThemeContext';
 import './Header.css';
 
@@ -48,10 +49,10 @@ export default function Header() {
           </button>
 
           <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <button onClick={() => scrollToSection('home')}>Accueil</button>
-            <button onClick={() => scrollToSection('about')}>À propos</button>
-            <button onClick={() => scrollToSection('services')}>Services</button>
-            <button onClick={() => scrollToSection('contact')}>Contact</button>
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Accueil</Link>
+            <Link to="/doctors" onClick={() => setIsMobileMenuOpen(false)}>Nos Médecins</Link>
+            <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
             <button
               onClick={toggleTheme}
               className="theme-toggle"
@@ -59,12 +60,16 @@ export default function Header() {
             >
               {isDark ? '☀️' : '🌙'}
             </button>
-            <button
+            <Link
+              to="/"
               className="btn-primary book-btn"
-              onClick={() => scrollToSection('appointment')}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setTimeout(() => scrollToSection('appointment'), 100);
+              }}
             >
               Prendre Rendez-vous
-            </button>
+            </Link>
           </nav>
         </div>
       </div>

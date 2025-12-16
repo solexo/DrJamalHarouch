@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -83,7 +84,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>&copy; {currentYear} RADIOLOGIE SIDI OTHMANE. Tous droits réservés.</p>
           <div className="footer-bottom-links">
-            <button onClick={() => scrollToSection('privacy')}>Politique de Confidentialité</button>
+            <Link to="/privacy">Politique de Confidentialité</Link>
           </div>
         </div>
       </div>
