@@ -82,6 +82,10 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>&copy; {currentYear} RADIOLOGIE SIDI OTHMANE. Tous droits réservés.</p>
+          <p className="privacy-notice">
+            Ce site ne collecte ni ne stocke aucune donnée personnelle.
+            Il se limite à fournir des informations et des liens de redirection vers des services externes (Google Maps, téléphone, WhatsApp).
+          </p>
         </div>
       </div>
     </footer>
