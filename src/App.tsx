@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -106,6 +107,14 @@ function PrivacyPage() {
 }
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js';
+    script.type = 'module';
+    script.defer = true;
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <ThemeProvider>
       <Router>
