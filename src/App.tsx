@@ -36,7 +36,6 @@ function HomePage() {
                 Chez Radiologie Sidi Othmane, nous utilisons des équipements IRM de dernière génération pour assurer des examens précis et confortables pour nos patients.
               </p>
             </div>
-            <div className="lottie-container" dangerouslySetInnerHTML={{__html: '<dotlottie-wc src="https://lottie.host/173cd462-1070-4bee-bbe4-ca907c535623/W80JNJewuU.lottie" autoplay loop></dotlottie-wc>'}} />
           </div>
         </div>
       </section>
