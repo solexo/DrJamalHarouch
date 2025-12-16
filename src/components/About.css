@@ -35,19 +35,6 @@
   line-height: 1.6;
 }
 
-.scanner-section {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.scanner-image-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
 .doctors-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
