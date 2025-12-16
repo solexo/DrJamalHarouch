@@ -29,7 +29,7 @@ export default function Footer() {
             <h4>Liens Rapides</h4>
             <ul className="footer-links">
               <li><button onClick={() => scrollToSection('home')}>Accueil</button></li>
-              <li><button onClick={() => scrollToSection('about')}>À propos du Dr. Jamal</button></li>
+              <li><button onClick={() => scrollToSection('doctors')}>Nos Médecins</button></li>
               <li><button onClick={() => scrollToSection('services')}>Services</button></li>
               <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
             </ul>
