@@ -40,6 +40,12 @@ export default function About() {
           </p>
         </div>
 
+        <div className="scanner-section">
+          <div className="scanner-image-wrapper">
+            <img src="/scanner.webp" alt="Scanner Radiologique" style={{width: '100%', height: 'auto', borderRadius: '10px'}} onLoad={() => console.log('Scanner image loaded')} onError={() => console.error('Scanner image failed to load')} />
+          </div>
+        </div>
+
         <div className="doctors-grid">
           {doctors.map((doctor, index) => (
             <div key={index} className="doctor-card">
