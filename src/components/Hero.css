@@ -34,6 +34,18 @@
     radial-gradient(circle at 80% 20%, rgba(0, 102, 204, 0.1) 0%, transparent 50%);
 }
 
+.hero-video-full::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.hero-video-full::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.hero-video-full::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 .hero-content {
   position: relative;
   display: flex;
