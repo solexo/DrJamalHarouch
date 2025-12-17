@@ -10,24 +10,21 @@ export default function Hero() {
     }
   };
 
+  console.log('Hero component mounted');
+
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.play().catch(() => {
-        // If autoplay blocked, play on user interaction
-        const playVideo = () => {
-          const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IAAAAAEAAQARAAAAEAAAAAEACABkYXRhAgAAAAEA');
-          silentAudio.volume = 0.01;
-          silentAudio.play().then(() => {
-            return video.play();
-          }).catch(() => {});
-          document.removeEventListener('click', playVideo);
-          document.removeEventListener('touchstart', playVideo);
-        };
-        document.addEventListener('click', playVideo);
-        document.addEventListener('touchstart', playVideo);
-      });
+      console.log('Video element found, paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
+      console.log('Video dimensions: width', video.clientWidth, 'height', video.clientHeight);
+      setTimeout(() => {
+        console.log('After 2s: paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
+      }, 2000);
     }
+    const hero = document.querySelector('.hero');
+    console.log('Hero element height:', hero?.clientHeight, 'scrollHeight:', hero?.scrollHeight);
+    const videoTop = document.querySelector('.hero-video-top');
+    console.log('Video top container height:', videoTop?.clientHeight);
   }, []);
 
   return (
@@ -39,6 +36,7 @@ export default function Hero() {
             <h1 className="hero-title">
               Diagnostic Précis <span className="highlight">et Soins Avancés</span>
             </h1>
+            {(() => { console.log('Hero title textContent:', JSON.stringify(document.querySelector('.hero-title')?.textContent)); return null; })()}
           </div>
         </div>
         <div className="hero-video-top">
@@ -50,7 +48,27 @@ export default function Hero() {
             playsInline
             preload="auto"
             className="hero-video-full"
-            onError={(e) => console.error('Hero video error:', e)}
+            onLoadedData={() => console.log('Hero video loaded')}
+            onPlay={() => console.log('Hero video playing')}
+            onError={(e) => console.log('Hero video error:', e)}
+            onLoadStart={() => console.log('Hero video load start')}
+            onCanPlay={() => console.log('Hero video can play')}
+            onCanPlayThrough={() => console.log('Hero video can play through')}
+            onWaiting={() => console.log('Hero video waiting')}
+            onStalled={() => console.log('Hero video stalled')}
+            onSuspend={() => console.log('Hero video suspended')}
+            onAbort={() => console.log('Hero video aborted')}
+            onPause={() => console.log('Hero video paused')}
+            onEnded={() => console.log('Hero video ended')}
+            onTimeUpdate={() => console.log('Hero video time update')}
+            onVolumeChange={() => console.log('Hero video volume change')}
+            onSeeking={() => console.log('Hero video seeking')}
+            onSeeked={() => console.log('Hero video seeked')}
+            onRateChange={() => console.log('Hero video rate change')}
+            onDurationChange={() => console.log('Hero video duration change')}
+            onProgress={() => console.log('Hero video progress')}
+            onEmptied={() => console.log('Hero video emptied')}
+            onLoadedMetadata={() => console.log('Hero video loaded metadata')}
           >
             <source src="/1212.webm" type="video/webm" />
           </video>
