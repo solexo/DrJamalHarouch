@@ -11,6 +11,32 @@ import Footer from './components/Footer';
 import { ThemeProvider } from './ThemeContext';
 
 function HomePage() {
+  useEffect(() => {
+    const checkLottie = () => {
+      const lottieEl = document.querySelector('dotlottie-wc') as any;
+      if (lottieEl) {
+        console.log('Lottie element found:', lottieEl);
+        console.log('Lottie autoplay:', lottieEl.autoplay);
+        console.log('Lottie loop:', lottieEl.loop);
+        console.log('Lottie currentState:', lottieEl.currentState);
+        console.log('Lottie isPlaying:', lottieEl.isPlaying);
+        console.log('Lottie isPaused:', lottieEl.isPaused);
+        console.log('Lottie isStopped:', lottieEl.isStopped);
+
+        // Add event listeners
+        lottieEl.addEventListener('play', () => console.log('Lottie play event'));
+        lottieEl.addEventListener('pause', () => console.log('Lottie pause event'));
+        lottieEl.addEventListener('stop', () => console.log('Lottie stop event'));
+        lottieEl.addEventListener('complete', () => console.log('Lottie complete event'));
+        lottieEl.addEventListener('load', () => console.log('Lottie load event'));
+        lottieEl.addEventListener('error', (e: any) => console.log('Lottie error event:', e));
+      } else {
+        console.log('Lottie element not found yet');
+        setTimeout(checkLottie, 1000);
+      }
+    };
+    checkLottie();
+  }, []);
   return (
     <>
       <Hero />
