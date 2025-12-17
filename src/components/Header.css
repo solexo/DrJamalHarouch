@@ -154,4 +154,9 @@
   .logo .subtitle {
     font-size: 0.7rem;
   }
+
+  .header {
+    background-color: var(--white);
+    backdrop-filter: none;
+  }
 }

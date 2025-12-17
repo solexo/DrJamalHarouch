@@ -27,7 +27,6 @@ export default function Hero() {
             muted
             playsInline
             preload="metadata"
-            controls={false}
             className="hero-video-full"
             onLoadedData={() => console.log('Hero video loaded')}
             onPlay={() => console.log('Hero video playing')}
