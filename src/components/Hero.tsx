@@ -13,12 +13,20 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      // Hack to enable autoplay in Safari
-      const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IAAAAAEAAQARAAAAEAAAAAEACABkYXRhAgAAAAEA');
-      silentAudio.volume = 0.01;
-      silentAudio.play().then(() => {
-        return video.play();
-      }).catch(() => {});
+      video.play().catch(() => {
+        // If autoplay blocked, play on user interaction
+        const playVideo = () => {
+          const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IAAAAAEAAQARAAAAEAAAAAEACABkYXRhAgAAAAEA');
+          silentAudio.volume = 0.01;
+          silentAudio.play().then(() => {
+            return video.play();
+          }).catch(() => {});
+          document.removeEventListener('click', playVideo);
+          document.removeEventListener('touchstart', playVideo);
+        };
+        document.addEventListener('click', playVideo);
+        document.addEventListener('touchstart', playVideo);
+      });
     }
   }, []);
 
