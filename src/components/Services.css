@@ -59,10 +59,10 @@
 }
 
 .service-icon {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--soft-green) 100%);
-  border-radius: 12px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,8 +76,8 @@
 }
 
 .service-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 
 .service-card h3 {
