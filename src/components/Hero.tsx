@@ -1,14 +1,6 @@
-import { useState, useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero() {
-  const [isIOS, setIsIOS] = useState(false);
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent;
-    setIsIOS(/iPad|iPhone|iPod/.test(userAgent));
-  }, []);
-
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
     if (element) {
@@ -30,11 +22,12 @@ export default function Hero() {
         </div>
         <div className="hero-video-top">
           <video
-            autoPlay={!isIOS}
+            autoPlay
             loop
             muted
             playsInline
             preload="metadata"
+            controls={false}
             className="hero-video-full"
             onLoadedData={() => console.log('Hero video loaded')}
             onPlay={() => console.log('Hero video playing')}
