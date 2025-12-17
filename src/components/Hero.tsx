@@ -1,8 +1,7 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
     if (element) {
@@ -13,29 +12,10 @@ export default function Hero() {
   console.log('Hero component mounted');
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      console.log('Video element found, paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
-      console.log('Video dimensions: width', video.clientWidth, 'height', video.clientHeight);
-      setTimeout(() => {
-        console.log('After 2s: paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
-      }, 2000);
-    }
     const hero = document.querySelector('.hero');
     console.log('Hero element height:', hero?.clientHeight, 'scrollHeight:', hero?.scrollHeight);
     const videoTop = document.querySelector('.hero-video-top');
     console.log('Video top container height:', videoTop?.clientHeight);
-
-    // Play video on first user interaction for Safari
-    const playVideo = () => {
-      if (video && video.paused) {
-        video.play().catch(console.log);
-      }
-      document.removeEventListener('touchstart', playVideo);
-      document.removeEventListener('click', playVideo);
-    };
-    document.addEventListener('touchstart', playVideo, { once: true });
-    document.addEventListener('click', playVideo, { once: true });
   }, []);
 
   return (
@@ -51,40 +31,15 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-video-top">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="hero-video-full"
-            onLoadedData={() => console.log('Hero video loaded')}
-            onPlay={() => console.log('Hero video playing')}
-            onError={(e) => console.log('Hero video error:', e)}
-            onLoadStart={() => console.log('Hero video load start')}
-            onCanPlay={() => console.log('Hero video can play')}
-            onCanPlayThrough={() => console.log('Hero video can play through')}
-            onWaiting={() => console.log('Hero video waiting')}
-            onStalled={() => console.log('Hero video stalled')}
-            onSuspend={() => console.log('Hero video suspended')}
-            onAbort={() => console.log('Hero video aborted')}
-            onPause={() => console.log('Hero video paused')}
-            onEnded={() => console.log('Hero video ended')}
-            onTimeUpdate={() => console.log('Hero video time update')}
-            onVolumeChange={() => console.log('Hero video volume change')}
-            onSeeking={() => console.log('Hero video seeking')}
-            onSeeked={() => console.log('Hero video seeked')}
-            onRateChange={() => console.log('Hero video rate change')}
-            onDurationChange={() => console.log('Hero video duration change')}
-            onProgress={() => console.log('Hero video progress')}
-            onEmptied={() => console.log('Hero video emptied')}
-            onLoadedMetadata={() => console.log('Hero video loaded metadata')}
-          >
-            <source src="/1212.webm" type="video/webm" />
-          </video>
-          <div className="hero-overlay"></div>
-        </div>
+           <img
+             src="/1212.gif"
+             alt="Hero animation"
+             className="hero-video-full"
+             onLoad={() => console.log('Hero gif loaded')}
+             onError={(e) => console.log('Hero gif error:', e)}
+           />
+           <div className="hero-overlay"></div>
+         </div>
         <div className="hero-bottom">
           <div className="hero-actions">
             <button className="btn-primary" onClick={scrollToAppointment}>
