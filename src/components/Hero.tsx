@@ -1,12 +1,26 @@
+import { useRef, useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  console.log('Hero component mounted');
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      console.log('Video element found, paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
+      setTimeout(() => {
+        console.log('After 2s: paused:', video.paused, 'readyState:', video.readyState, 'currentTime:', video.currentTime);
+      }, 2000);
+    }
+  }, []);
 
   return (
     <section id="home" className="hero">
@@ -22,12 +36,12 @@ export default function Hero() {
         </div>
         <div className="hero-video-top">
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
-            poster="/xray.webp"
             className="hero-video-full"
             onLoadedData={() => console.log('Hero video loaded')}
             onPlay={() => console.log('Hero video playing')}
