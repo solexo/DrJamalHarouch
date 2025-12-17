@@ -25,6 +25,17 @@ export default function Hero() {
     console.log('Hero element height:', hero?.clientHeight, 'scrollHeight:', hero?.scrollHeight);
     const videoTop = document.querySelector('.hero-video-top');
     console.log('Video top container height:', videoTop?.clientHeight);
+
+    // Play video on first user interaction for Safari
+    const playVideo = () => {
+      if (video && video.paused) {
+        video.play().catch(console.log);
+      }
+      document.removeEventListener('touchstart', playVideo);
+      document.removeEventListener('click', playVideo);
+    };
+    document.addEventListener('touchstart', playVideo, { once: true });
+    document.addEventListener('click', playVideo, { once: true });
   }, []);
 
   return (
