@@ -243,7 +243,7 @@ button {
 }
 
 .scanner-image-wrapper {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   border-radius: var(--border-radius-lg);
   overflow: hidden;

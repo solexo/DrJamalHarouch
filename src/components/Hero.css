@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   display: block;
-  padding-top: 140px;
+  padding-top: 120px;
   overflow: hidden;
 }
 
@@ -219,7 +219,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 140px;
+    padding-top: 120px;
   }
 
   .hero-title {
