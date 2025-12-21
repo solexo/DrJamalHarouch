@@ -9,8 +9,6 @@ export default function Hero() {
     }
   };
 
-  console.log('Hero component mounted');
-
   useEffect(() => {
     // Removed console.log to prevent forced reflow
   }, []);
@@ -24,7 +22,6 @@ export default function Hero() {
             <h1 className="hero-title">
               Diagnostic Précis <span className="highlight">et Soins Avancés</span>
             </h1>
-            {(() => { console.log('Hero title textContent:', JSON.stringify(document.querySelector('.hero-title')?.textContent)); return null; })()}
           </div>
         </div>
         <div className="hero-video-top">

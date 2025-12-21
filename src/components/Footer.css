@@ -39,7 +39,7 @@
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
   font-size: 0.95rem;
 }
@@ -56,7 +56,7 @@
 
 .footer-links button {
   background: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   padding: 0;
   font-size: 0.95rem;
   text-align: left;
@@ -79,7 +79,7 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.6;
 }

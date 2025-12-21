@@ -45,7 +45,7 @@ function HomePage() {
         <div className="container">
           <div className="scanner-content">
             <div className="scanner-image-wrapper">
-              <img src="/logo.webp" alt="Scanner Radiologique" width="600" height="412" style={{width: '100%', height: 'auto', borderRadius: '10px'}} />
+              <img src="/logo.webp" alt="Scanner Radiologique" width="600" height="412" style={{width: '100%', height: 'auto', borderRadius: '10px'}} loading="lazy" />
             </div>
           </div>
         </div>

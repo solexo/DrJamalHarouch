@@ -78,7 +78,7 @@ export default function Appointment() {
                   </svg>
                 </div>
                 <div>
-                  <h4>Heures d'Ouverture</h4>
+                  <h3>Heures d'Ouverture</h3>
                   <p>Lundi - Vendredi : 9h00 - 18h00</p>
                   <p>Samedi : 9h00 - 13h00</p>
                 </div>
@@ -92,7 +92,7 @@ export default function Appointment() {
                   </svg>
                 </div>
                 <div>
-                  <h4>Emplacement</h4>
+                  <h3>Emplacement</h3>
                   <p>Avenue 10 Mars, Salama 3</p>
                   <p>Sidi Othmane, Casablanca, Maroc</p>
                 </div>
