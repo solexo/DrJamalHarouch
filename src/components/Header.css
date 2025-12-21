@@ -39,6 +39,12 @@
   text-transform: uppercase;
 }
 
+.logo-icon img {
+  border-radius: 50%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;

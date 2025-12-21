@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   display: block;
-  padding-top: 80px;
+  padding-top: 140px;
   overflow: hidden;
 }
 
@@ -154,8 +154,11 @@
 }
 
 .hero-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 600px;
-  margin: 40px auto 40px;
   text-align: center;
 }
 
@@ -216,7 +219,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 140px;
   }
 
   .hero-title {
