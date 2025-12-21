@@ -31,7 +31,7 @@ export default function Header() {
         <div className="header-content">
           <div className="logo">
             <div className="logo-icon">
-              <img src="/logo copy.webp" alt="Radiologie Sidi Othmane Logo" width="80" height="80" onLoad={() => console.log('Logo image loaded')} onError={() => console.error('Logo image failed to load')} />
+              <img src="/logo copy.webp" alt="Radiologie Sidi Othmane Logo" width="80" height="80" />
             </div>
           </div>
 

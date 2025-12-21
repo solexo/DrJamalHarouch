@@ -12,10 +12,7 @@ export default function Hero() {
   console.log('Hero component mounted');
 
   useEffect(() => {
-    const hero = document.querySelector('.hero');
-    console.log('Hero element height:', hero?.clientHeight, 'scrollHeight:', hero?.scrollHeight);
-    const videoTop = document.querySelector('.hero-video-top');
-    console.log('Video top container height:', videoTop?.clientHeight);
+    // Removed console.log to prevent forced reflow
   }, []);
 
   return (
