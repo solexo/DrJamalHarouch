@@ -22,12 +22,6 @@ export default function Hero() {
             <h1 className="hero-title">
               Diagnostic Précis <span className="highlight">et Soins Avancés</span>
             </h1>
-            <p className="hero-description">
-              Bienvenue au Cabinet de Radiologie Sidi Othmane, votre partenaire de confiance en imagerie médicale à Casablanca depuis 1994. Forts de plus de 30 années d'expérience ininterrompue, nous offrons des services de radiologie diagnostique de pointe incluant l'échographie, le scanner, l'IRM et la radiologie dentaire. Notre équipe de radiologues expérimentés, dirigée par le Dr Jamal Harouch, met à votre disposition des équipements de dernière génération pour des diagnostics précis et des soins personnalisés.
-            </p>
-            <p className="hero-experience">
-              Le Cabinet de Radiologie Sidi Othmane est établi à Casablanca depuis 1994, offrant plus de 30 années consécutives d'expertise en imagerie médicale. Nos radiologues qualifiés utilisent des technologies de pointe pour assurer des diagnostics fiables et des soins de qualité supérieure à nos patients.
-            </p>
           </div>
         </div>
         <div className="hero-video-top">

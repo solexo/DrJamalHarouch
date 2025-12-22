@@ -31,7 +31,7 @@ export default function Header() {
         <div className="header-content">
           <div className="logo">
             <div className="logo-icon">
-              <img src="/logo copy.webp" alt="Radiologie Sidi Othmane Logo" width="80" height="80" />
+              <img src="/logo.webp" alt="Radiologie Sidi Othmane Logo" width="80" height="80" />
             </div>
           </div>
 
