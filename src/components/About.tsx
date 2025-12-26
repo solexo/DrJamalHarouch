@@ -16,7 +16,7 @@ const doctors = [
   {
     name: 'Dr. El Hammaoui Hanane',
     specialty: 'Spécialiste en Radiologie Médicale',
-    description: 'Le Dr El Hammaoui Hanane est médecin radiologue exerçant au Centre de Radiologie Sidi Othmane à Casablanca. Elle met son expertise en imagerie médicale au service de ses patients pour réaliser des examens radiologiques précis et adaptés à chaque situation. La radiologie médicale utilise des technologies avancées telles que la radiographie, les ultrasons, la tomodensitométrie (scanner) ou l\'IRM pour visualiser l\'intérieur du corps humain de manière non invasive.',
+    description: 'Le Dr El Hammaoui Hanane est une médecin radiologue hautement qualifiée, diplômée de la faculté de médecine et de pharmacie de Marrakech en 2020. Elle a poursuivi sa formation spécialisée avec un DIU de l\'imagerie ostéo articulaire et un DIU d\'imagerie thoracique de l\'université de Paris Cité. Exerçant au Centre de Radiologie Sidi Othmane à Casablanca, elle met son expertise en imagerie médicale au service de ses patients pour réaliser des examens radiologiques précis et adaptés à chaque situation. La radiologie médicale utilise des technologies avancées telles que la radiographie, les ultrasons, la tomodensitométrie (scanner) ou l\'IRM pour visualiser l\'intérieur du corps humain de manière non invasive.',
     qualifications: []
   },
   {
