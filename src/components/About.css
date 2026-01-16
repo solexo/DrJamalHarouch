@@ -1,0 +1,145 @@
+.doctors {
+  background-color: var(--off-white);
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--soft-green-light);
+  color: var(--text-primary);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.doctor-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.doctor-header {
+  margin-bottom: 20px;
+}
+
+.doctor-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.doctor-specialty {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.doctor-description {
+  margin-bottom: 24px;
+}
+
+.doctor-description p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.doctor-qualifications {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.doctor-qualifications h4 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.doctor-qualifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doctor-qualifications li {
+  padding: 6px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.doctor-qualifications li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .doctor-card {
+    padding: 24px;
+  }
+
+  .doctor-header h3 {
+    font-size: 1.25rem;
+  }
+}

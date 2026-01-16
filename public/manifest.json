@@ -1,0 +1,17 @@
+{
+  "name": "Radiologie Sidi Othmane",
+  "short_name": "RSO",
+  "description": "Cabinet de radiologie du Dr Jamal Harouch à Casablanca, Maroc. Services de radiologie diagnostique, échographie, IRM.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
