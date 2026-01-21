@@ -33,7 +33,7 @@ export default function Contact() {
             </div>
             <h3>Email</h3>
             <p>Envoyez-nous un message</p>
-            <a href="mailto:HarouchJamal@gmail.com" className="contact-link">HarouchJamal@gmail.com</a>
+            <a href="mailto:radiologiesidiothmane2@gmail.com" className="contact-link">radiologiesidiothmane2@gmail.com</a>
           </div>
 
           <div className="contact-card">
