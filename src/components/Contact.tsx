@@ -70,7 +70,7 @@ export default function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Map of Dr. Jamal Harouch's office"
+            title="Map of Radiologie sidi othmane"
           ></iframe>
         </div>
       </div>
